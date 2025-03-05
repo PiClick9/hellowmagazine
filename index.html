@@ -110,6 +110,8 @@
     <div class="DIV-15">
       <div class="DIV-16">
         <header class="HEADER-0">
+          <link rel="stylesheet" href="https://usapi.aedi.ai/common/css/v1/aedi-ad-us.css" />
+          <script src="https://usapi.aedi.ai/common/js/v1/aedi-ad-us.js"></script>
           <div class="DIV-17">
             <div class="DIV-18">
               <div class="DIV-19">
@@ -11598,3 +11600,13 @@
     display: none;
   }
 </style>
+<script>
+  var API_KEY = '6fe131632103526e3a6e8114c78eb1e1';
+  var aedi = new Aedi();
+  var aediWritingTime = '2025-02-26T14:10:39.180Z';
+  var imgSelector = Array.from(
+    document.querySelectorAll('picture img, .DIV-16 figure img:not(nav img)')
+  ).filter((img) => img.width > 100 && img.height > 200);
+  var captionSelector = null;
+  aedi.adOpen(API_KEY, imgSelector, aediWritingTime, captionSelector);
+</script>
